@@ -1,0 +1,150 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #3081D0;
+  user-select: none;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background-color: #3081D0;
+  padding: 40px 60px;
+  border-radius: 5px;
+}
+
+h2 {
+  font-size: 3em;
+  color: #ffff;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+#count {
+  height: 30px;
+  text-align: center;
+  font-size: 2em;
+  color: #ffff
+}
+
+.resetBtn {
+  padding: 15px 20px;
+  width: 100%;
+  color: #1640D6;
+  background-color: #C5FFF8;
+  border: none;
+  font-size: 1.5em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.resetBtn:focus {
+  color: #E26EE5;
+  background-color: #250747;
+}
+
+.game {
+  width: 550px;
+  height: 430px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  transform-style: preserve-3d;
+  perspective:  500px;
+}
+
+.item {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffff;
+  font-size: 3em;
+  border-radius: 5px;
+  cursor: pointer;
+
+  transform: rotateY(180deg);
+  transition: .5s;
+}
+
+.item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #F3F8FF;
+  transition: .5s;
+  transform:  rotateY(0deg);
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+.item.boxOpen {
+  transform:  rotateY(0deg);
+}
+
+.boxOpen::after,
+.boxMatch::after
+{
+  transform: rotateY(180deg);
+}
+
+
+@media screen and (max-width: 600px) {
+
+  body {
+    background-color: #3081D0;
+  }
+
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 60px;
+  }
+
+  .game {
+    width: 300px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    transform-style: preserve-3d;
+    perspective:  300px;
+  }
+  
+
+  .item {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  span {
+    font-size: 1.5em;
+    margin-bottom: 2rem;
+  }
+
+}
