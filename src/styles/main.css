@@ -15,14 +15,14 @@ body {
   align-items: center;
   gap: 30px;
   background-color: #3081D0;
-  padding: 40px 60px;
+  padding: 40px 20px;
   border-radius: 5px;
 }
 
 h2 {
   font-size: 3em;
   color: #ffff;
-  text-transform: uppercase;
+  -webkit-text-transform: uppercase;
   letter-spacing: .1em;
 }
 
@@ -41,7 +41,7 @@ h2 {
   border: none;
   font-size: 1.5em;
   letter-spacing: .1em;
-  text-transform: uppercase;
+  -webkit-text-transform: uppercase;
   cursor: pointer;
   font-weight: bold;
   border-radius: 5px;
@@ -57,8 +57,8 @@ h2 {
   height: 430px;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  transform-style: preserve-3d;
+  gap: 5px;
+  -webkit-transform-style: preserve-3d;
   perspective:  500px;
 }
 
@@ -73,30 +73,32 @@ h2 {
   font-size: 3em;
   border-radius: 5px;
   cursor: pointer;
+  margin: .2rem;
 
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
   transition: .5s;
 }
 
 .item::after {
-  content: "";
+  content: ".";
+  font-size: .1em;
   position: absolute;
   inset: 0;
   background-color: #F3F8FF;
   transition: .5s;
-  transform:  rotateY(0deg);
+  -webkit-transform:  rotateY(0deg);
   border-radius: 5px;
   backface-visibility: hidden;
 }
 
 .item.boxOpen {
-  transform:  rotateY(0deg);
+  -webkit-transform:  rotateY(0deg);
 }
 
 .boxOpen::after,
 .boxMatch::after
 {
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
 }
 
 
@@ -113,29 +115,30 @@ h2 {
     justify-content: center;
     align-items: center;
     gap: 30px;
-    padding: 20px 60px;
+    padding: 20px 20px;
   }
 
   .game {
-    width: 300px;
-    height: 250px;
+    width: 100%;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
-    transform-style: preserve-3d;
+    -webkit-gap: 10px;
+    -webkit-transform-style: preserve-3d;
     perspective:  300px;
   }
   
 
   .item {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2em;
+    margin: .1rem;
   }
   
   h2 {
@@ -146,5 +149,10 @@ h2 {
     font-size: 1.5em;
     margin-bottom: 2rem;
   }
+
+  .resetBtn {
+    margin-top: 3rem;
+}
+
 
 }
