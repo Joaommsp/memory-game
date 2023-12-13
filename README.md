@@ -15,4 +15,4 @@ Desenvolvi esse joguindo da memória pelas aulas do bootcamp Potência Tech Ifoo
 
 # AVISO ⚠
 
-Aparentemente no navegador Safari a propriedade "::after" não está funcionando nesse projeto , então as cartas não viram 😥
+Aparentemente no navegador Safari o pseudoelemento css "::after" não está funcionando corretamente nesse projeto , então as cartas não viram , logo não é possível jogar em Iphones😥
