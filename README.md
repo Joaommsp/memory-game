@@ -12,3 +12,7 @@ Desenvolvi esse joguindo da memória pelas aulas do bootcamp Potência Tech Ifoo
 
 ![](src/images/photo1.PNG)
 ![](src/images/photo2.PNG)
+
+# AVISO ⚠
+
+Aparentemente no navegador Safari a propriedade "::after" não está funcionando nesse projeto , então as cartas não viram 😥
